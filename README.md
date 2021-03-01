@@ -11,7 +11,7 @@ Database - contains multiple tables
 
 CRUD Model
 
-Create
-Read
-Update
-Delete
+Create - CREATE TABLE, INSERT INTO 
+Read - SELECT, FROM, WHERE, ORDER BY
+Update - UPDATE, SET, WHERE
+Delete - DELETE FROM , WHERE 
