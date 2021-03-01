@@ -8,3 +8,10 @@ Database - contains multiple tables
         Tuple / Row - set of fields that represent an object
     |_
         Attribute / Column / Field - one of possible many elements of data an object in a row might have 
+
+CRUD Model
+
+Create
+Read
+Update
+Delete
