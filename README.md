@@ -27,7 +27,7 @@ Primary Keys - unique interger ID of row in a DB, no outside meaing
 
 Forgien Keys - unique interger ID or primary key in other table
 
-Logical Keys - what a user would actualy look up as a key, like a name
+Logical Keys - what a user would actualy look up as a key, like a name, often still unique
 
 ### Naming conventions
 
@@ -53,12 +53,16 @@ A One-to-Many relationship is also sometimes called a Parent-Child relationship,
             Each Album has artist_id as a Forgien Key in its row as an Atribute
 
 
-Mant-to-Many : Broken up into 3 tables, 2 entity tables and a lookup table.
-                The lookup table with have the IDs of both entety tables as Forgein Key Attributes
+Mant-to-Many : Broken up into 3 tables, 2 entity tables and a junction table. The junction table with have the IDs of both entety tables as Forgein Key Attributes
+
+Note that the junction table often dosn't have a primary key of its own and unses the unique paring/tuples of FK ids as its uniquenesss constraint / PK for speed and efficiency.
+
+This junction table may contain additional data modeled at the conection.
     
-    example: Many Students take Many Classes
-            table of Students with id, table of Classes with id
-            table Students_Classes with row containg student_id, class_id if student has that class 
+    example: Many Students take Many Classes.
+            1) Table of Students with id
+            2) Table of Classes with id 
+            3) Table Students_Classes with row containg student_id, class_id if student has that class 
 
 ## Forgien Key Constraints
 
@@ -71,7 +75,7 @@ If we have dependent One-to-Many / Parent-Child relationships, we need a way to 
 ### Child Conditions
     RESTRICT - no chnage allowed, throws error
     CASCADE - changes all dependent values
-    SET NULL - sets FK to NULL
+    SET NULL - sets FK to NULL, will throw error if FK has NOT NULL contraint
 
 ## Joins 
 
