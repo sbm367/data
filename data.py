@@ -106,6 +106,8 @@ def delete_data():
 
 
 # Databases and Python, using an ORM
+import sqlalchemy
+
 
 # Databases and Python,
 # In-memory DB-ish stuff with Pandas
